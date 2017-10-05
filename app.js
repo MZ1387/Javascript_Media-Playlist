@@ -7,5 +7,22 @@ playlist.add(humoDeTabaco);
 playlist.add(lovedLikeThis);
 
 let playlistElement = document.getElementById("playlist");
-
 playlist.renderIn(playlistElement);
+
+let playButton = document.getElementById('play');
+playButton.onclick = function() {
+  playlist.play();
+  playlist.renderIn(playlistElement);
+}
+
+let nextButton = document.getElementById('next');
+nextButton.onclick = function() {
+  playlist.next();
+  playlist.renderIn(playlistElement);
+}
+
+let stopButton = document.getElementById('stop');
+stopButton.onclick = function() {
+  playlist.stop();
+  playlist.renderIn(playlistElement);
+}
