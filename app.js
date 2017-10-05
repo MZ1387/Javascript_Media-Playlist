@@ -5,3 +5,7 @@ let lovedLikeThis = new Song("Loved Like This", "Tatiana Manaois", "3:19");
 
 playlist.add(humoDeTabaco);
 playlist.add(lovedLikeThis);
+
+let playlistElement = document.getElementById("playlist");
+
+playlist.renderIn(playlistElement);

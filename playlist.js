@@ -26,6 +26,9 @@ Playlist.prototype.next = function() {
   this.play();
 };
 
-Playlist.prototype.renderIn = function() {
-
+Playlist.prototype.renderIn = function(list) {
+  list.innerHTML = "";
+  for (let i = 0; i < this.songs.length; i++) {
+    list.innerHTML += this.songs[i].toHTML();
+  }
 };

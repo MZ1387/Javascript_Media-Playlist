@@ -14,5 +14,17 @@ Song.prototype.stop = function() {
 };
 
 Song.prototype.toHTML = function() {
+    let htmlString = '<li';
 
+    if (this.isPlaying) htmlString += ' class="current"';
+
+    htmlString += '>';
+    htmlString += this.title;
+    htmlString += ' - ';
+    htmlString += this.artist;
+    htmlString += '<span class="duration">';
+    htmlString += this.duration;
+    htmlString += '</span></li>';
+
+    return htmlString;
 };
